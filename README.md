@@ -34,4 +34,10 @@ kubectl logs ${pod}
   [...]
 kubectl get deployment,middleware,pod,service,ingress ${pod} -o yaml
   [...]
+kubectl get secret
+  [...]
+kubectl get secret
+kubectl describe secret ${secret}
+kubectl get secret ${secret} -o jsonpath='{.data}'
+echo '$(kubectl get secret ${secret} -o jsonpath='{.data}')' | base64 --decode
 ```
