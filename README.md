@@ -40,4 +40,6 @@ kubectl get secret
 kubectl describe secret ${secret}
 kubectl get secret ${secret} -o jsonpath='{.data}'
 echo '$(kubectl get secret ${secret} -o jsonpath='{.data}')' | base64 --decode
+  [...]
+kubectl get svc --all-namespaces
 ```
